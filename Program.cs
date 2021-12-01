@@ -49,8 +49,10 @@ namespace HumanAssignment
         // Build Attack method
         public int Attack(Human target)
         {
-            
-            return 0;
+            int dmg = Strength * 3;
+            target.health -= dmg;
+            Console.WriteLine($"{target.Name} was attacked by {Name}! They sustained {dmg} damage!");
+            return target.health;
         }
     }
 
